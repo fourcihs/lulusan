@@ -1,41 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Warehouse Fourci | E-Catalogue</title>
+    <title>E-Data Entry | BK SMAN 4 Cimahi</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <style>
         /* Mengatur dasar halaman jadi Putih Bersih */
-        :root { 
-          --primary: #8b5cf6; /* Soft Purple Premium */
-          --deep-purple: #2e1065; /* Deep Purple Luxury */
-          --glass-white: rgba(255, 255, 255, 0.25);
-          --primary-blue: #a3d8f4;         
-          --primary-purple: #e0ccff;       
-          --primary-purple-dark: #b388ff;  
-          --luxury-indigo: #4a148c;
-          --luxury-violet: #6200ea;
-          
-          --glass-bg: rgba(255, 255, 255, 0.45);        /* Kaca putih super soft */
-          --glass-border: rgba(255, 255, 255, 0.4);     /* Border kaca tipis elegan */
-          
-          --text: #1a1a2e;                              /* Teks gelap solid kontras tinggi */
-          --text-muted: #64748b;                        
-          
-          /* Gradien background real-glass premium */
-          --bg-gradient: linear-gradient(135deg, #e0f2fe 0%, #f3e8ff 50%, #e0ccff 100%);
-        }
-        body { 
-          /* Luxury Soft Purple Gradation Background */
-          background: linear-gradient(135deg, #f5f3ff 0%, #ede9fe 50%, #ddd6fe 100%);
-          background-attachment: fixed;
-          color: #0f172a; 
-          min-height: 100vh;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          justify-content: center;
-          padding: 30px 15px;
-          margin: 0;
+        body, html { 
+            margin: 0; 
+            padding: 0; 
+            height: 100%; 
+            width: 100%; 
+            overflow: hidden; 
+            background: linear-gradient(135deg, rgba(227, 242, 253, 0.5) 0%, rgba(236, 239, 241, 0.5) 100%);
+
         }
 
         .wrapper { 
@@ -52,8 +29,8 @@
             width: 100%; 
             height: calc(100% + 45px); 
             border: none;
-            padding-top: 45px; 
-            padding-bottom: 65px; 
+            padding-top: 25px; 
+            padding-bottom: 35px; 
             box-sizing: border-box;
             /* Pastikan background iframe juga putih agar serasi */
             background-color: linear-gradient(135deg, #E3F2FD 0%, #ECEFF1 100%)
