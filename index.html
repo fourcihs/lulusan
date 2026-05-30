@@ -1,27 +1,74 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>E-Data Collection SMA 4 Cimahi</title>
+    <title>Warehouse Fourci | E-Catalogue</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <style>
-        body, html { 
-            margin: 0; padding: 0; height: 100%; width: 100%;
-            overflow: hidden; background-color: linear-gradient(135deg, #f5f3ff 0%, #ede9fe 50%, #ddd6fe 100%);
+        /* Mengatur dasar halaman jadi Putih Bersih */
+        :root { 
+          --primary: #8b5cf6; /* Soft Purple Premium */
+          --deep-purple: #2e1065; /* Deep Purple Luxury */
+          --glass-white: rgba(255, 255, 255, 0.25);
+          --primary-blue: #a3d8f4;         
+          --primary-purple: #e0ccff;       
+          --primary-purple-dark: #b388ff;  
+          --luxury-indigo: #4a148c;
+          --luxury-violet: #6200ea;
+          
+          --glass-bg: rgba(255, 255, 255, 0.45);        /* Kaca putih super soft */
+          --glass-border: rgba(255, 255, 255, 0.4);     /* Border kaca tipis elegan */
+          
+          --text: #1a1a2e;                              /* Teks gelap solid kontras tinggi */
+          --text-muted: #64748b;                        
+          
+          /* Gradien background real-glass premium */
+          --bg-gradient: linear-gradient(135deg, #e0f2fe 0%, #f3e8ff 50%, #e0ccff 100%);
         }
+        body { 
+          /* Luxury Soft Purple Gradation Background */
+          background: linear-gradient(135deg, #f5f3ff 0%, #ede9fe 50%, #ddd6fe 100%);
+          background-attachment: fixed;
+          color: #0f172a; 
+          min-height: 100vh;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          padding: 30px 15px;
+          margin: 0;
+        }
+
+        .wrapper { 
+            position: relative; 
+            width: 100%; 
+            height: 100vh; 
+            overflow: hidden; 
+        }
+
         iframe {
             position: absolute;
-            top: -45px; /* Ini jurus menghapus banner biru Google */
-            left: 0;
-            width: 100%;
-            height: calc(100% + 45px);
+            top: -45px; 
+            left: 0; 
+            width: 100%; 
+            height: calc(100% + 45px); 
             border: none;
-            padding-top: 45px;
+            padding-top: 45px; 
+            padding-bottom: 65px; 
+            box-sizing: border-box;
+            /* Pastikan background iframe juga putih agar serasi */
+            background-color: linear-gradient(135deg, #E3F2FD 0%, #ECEFF1 100%)
         }
     </style>
 </head>
 <body>
-    <div style="height: 45px; width: 100%;"></div>
-        <iframe src="https://script.google.com/macros/s/AKfycbxa8FGnnMQc_l4lRJBJUFmTqNirVWAnqpmptKWDvTAugVC2t4xXBCys6P2pBY2HNh9VlQ/exec"></iframe>
+    <div class="wrapper">
+        <iframe id="myIframe" src="" allowtransparency="true"></iframe>
     </div>
+
+    <script>
+        const queryString = window.location.search;
+        const baseUrl = "https://script.google.com/macros/s/AKfycbxa8FGnnMQc_l4lRJBJUFmTqNirVWAnqpmptKWDvTAugVC2t4xXBCys6P2pBY2HNh9VlQ/exec";
+        document.getElementById('myIframe').src = baseUrl + queryString;
+    </script>
 </body>
 </html>
